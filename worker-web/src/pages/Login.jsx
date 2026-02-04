@@ -226,7 +226,7 @@ const Login = () => {
 
             <div style={{ textAlign: 'left' }}>
               <label style={{ color: '#aaa', fontSize: '0.9rem' }}>address</label>
-              <input type="text" name="address" onChange={handleChange} required style={inputStyle} placeholder="123 street, city" />
+              <input type="text" name="address" onChange={handleChange} required style={inputStyle} placeholder="Address1, Address2, City, Province, Postalcode" />
             </div>
 
             <div style={{ textAlign: 'left' }}>
@@ -275,10 +275,6 @@ const Login = () => {
       </div>
 
 
-
-
-
-      
     </div>
   );
 };
