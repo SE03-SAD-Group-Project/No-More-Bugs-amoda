@@ -101,7 +101,8 @@ app.put('/worker/:id', (req, res) => {
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // 2. Catch-all route: Send index.html for any request not handled by API
-app.get('*', (req, res) => {
+// We use /.*/ (Regex) instead of '*' string to avoid the syntax error
+app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
